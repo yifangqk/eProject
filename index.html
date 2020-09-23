@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="//code.jquery.com/jquery.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+    /* decor compareTable */
+    .sidenav.compare {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 200px;
+      background: #dfe2e2;
+      overflow-x: hidden;
+      padding: 4px;
+      width: 90%;
+      right: 0;
+      border-radius: 20px 0 0 20px;
+      box-shadow: rgb(187, 183, 183) -5px 7px 10px 1px;
+      
+    }
+
+    .table-responsive {
+      width: 100%;
+      text-align: center;
+      border: 1px solid rgb(209, 202, 202);
+      border-right: none;
+      left: 0;
+      border-radius: 10px 0 0 10px;
+    }
+
+    /* x decor compareTable x */
+    /* sidenav decor */
+    .sidenav.brand {
+      display: none;
+      width: 9%;
+      position: fixed;
+      z-index: 1;
+      top: 250px;
+      left: 1px;
+      background: #dfe2e2;
+      overflow-x: hidden;
+      padding: 4px 0;
+      border-radius: 0 20px 20px 0;
+      box-shadow: rgb(153, 148, 148) 5px 5px 10px 1px;
+    }
+
+    .sidenav.brand a {
+      padding: 6px 0px 0px 6px;
+      text-decoration: none;
+      font-size: 100%;
+      font-weight: bolder;
+      color: #517EA6;
+      display: block;
+    }
+
+    .sidenav.brand a:hover {
+      background: #517EA6;
+      color: #dfe2e2;
+    }
+
+    /* sidenav decor */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #f0f2f2;
+    }
+
+    li>a {
+      font-size: 1.7rem;
+      margin: 0 1.5rem;
+    }
+
+    .active {
+      background-color: #84A9BF;
+    }
+
+    #activelink {
+      background-color: #84A9BF;
+      color: #ffff;
+    }
+
+    h3 {
+      color: #517EA6;
+      font-weight: 600;
+    }
+
+    /* carousel decor */
+    #carou1, #carou2, #carou3{
+      height: 100%;
+      width: 100%;
+    }
+    .carousel-inner {
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .carousel-caption>h1,
+    .carousel-caption>p {
+      color: #517EA6;
+    }
+
+    .carousel-caption>p {
+      color: #f0f2f2;
+    }
+
+    /* carousel decor */
+    /* 48 products */
+    .iconProducts {
+      width: 100%;
+    }
+
+    /* x 48 products x */
+    /* checkbok products */
+    .checkbox {
+      display: inline-block;
+      position: absolute;
+      top: 10%;
+      left: 20%;
+    }
+
+    /* checkbox products */
+    /* glyphicon upArrow */
+    .glyphicon.glyphicon-circle-arrow-up {
+      font-size: 4rem;
+      display: block;
+      float: right;
+      position: relative;
+      top: 5vh;
+    }
+
+    /* x glyphicon upArrow x */
+    /* animation brand logo */
+    .navbar-brand,
+    .glyphicon.glyphicon-cog {
+      -webkit-animation: spin 4s linear infinite;
+      -moz-animation: spin 4s linear infinite;
+      animation: spin 4s linear infinite;
+    }
+
+    @-moz-keyframes spin {
+      100% {
+        -moz-transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    /* x animation brand logo x */
+  </style>
+</head>
+
+<body>
+  <!-- top-header-banner -->
+  <div class="container" id="topBanner">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-4 col-lg-offset-3 col-sm-offset-3 col-md-offset-3 col-xs-offset-1">
+        <img alt="" src="../MEDIA/banner.png" style="width: 500px;">
+      </div>
+    </div>
+  </div>
+  <!-- end top-header-banner -->
+  <!-- nav bar -->
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-lg-offset-0 col-sm-offset-0 col-md-offset-0 col-xs-offset-0">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <img class="navbar-brand " src="./MEDIA/logo no title.png" alt="">
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a href="#" id="activelink">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brand <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#panasonic">Panasonic</a></li>
+                    <li><a href="#daikin">Daikin </a></li>
+                    <li><a href="#lg">LG</a></li>
+                    <li><a href="#sharp">SHARP</a></li>
+                  </ul>
+                </li>
+                <li><a href="#panasonic">Products</a></li>
+                <li><a href="#">Compare</a></li>
+                <li><a href="#aboutUs">Contact Us</a></li>
+              </ul>
+              <!-- search -->
+              <ul>
+                <form class="navbar-form navbar-right">
+                  <div class="input-group">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search" style="border-right: none;">
+                    </div>
+                    <div class="input-group-addon" style="background-color: #ffff; border-left: none;"><i
+                        class="glyphicon glyphicon-search"></i></div>
+                  </div>
+                </form>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- x nav bar x -->
+
+
+  <!-- carousel -->
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div id="carousel-id" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+            <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+            <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item">
+              <img data-src="" alt="First slide" src="./MEDIA/carou1.png" id="carou1">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Remote Control</h1>
+                  <p>Cooling your room before you arrive home </p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Explore more</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img data-src="" alt="Second slide" src="./MEDIA/carou2.png" id="carou2">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Inverter Technology</h1>
+                  <p>Save energy, live positively</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">
+                      International Standard
+                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                      <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                    </a></p>
+                </div>
+              </div>
+            </div>
+            <div class="item active">
+              <img data-src="" alt="Third slide" src="./MEDIA/carou3.png" id="carou3">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Modern Design</h1>
+                  <p>We care about designation of air condition to suitable every corner of your home, your office </p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Take a look</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span
+              class="glyphicon glyphicon-chevron-left"></span></a>
+          <a class="right carousel-control" href="#carousel-id" data-slide="next"><span
+              class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <hr>
+
+
+  <!-- x carousel x  -->
+
+  <!-- products -->
+  <!-- panasonic -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+        <h3 id="panasonic">PANASONIC BRAND <span class="glyphicon glyphicon-cog" aria-hidden="true"></span></h3>
+      </div>
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- -------- -->
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- -------- -->
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- ---x panasonic x----- -->
+      <!-- daikin -->
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+        <h3 id="daikin">DAIKIN BRAND <span class="glyphicon glyphicon-cog" aria-hidden="true"></span></h3>
+      </div>
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- -------- -->
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- -------- -->
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- ----x daikin x---- -->
+      <!-- lg -->
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+        <h3 id="lg">LG BRAND<span class="glyphicon glyphicon-cog" aria-hidden="true"></span></h3>
+      </div>
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- -------- -->
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- -------- -->
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- ----x lg x---- -->
+      <!-- sharp -->
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+        <h3 id="sharp">SHARP BRAND <span class="glyphicon glyphicon-cog" aria-hidden="true"></span></h3>
+      </div>
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- -------- -->
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- -------- -->
+      <!-- --------- -->
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="./MEDIA/products/icon1.png" alt="" class="iconProducts">
+        <div class="checkbox" data-toggle="popover" data-content="Select one more to compare">
+          <input type="checkbox" value="">
+        </div>
+      </div>
+      <!-- ----x sharp x---- -->
+    </div>
+  </div>
+  <!-- sidenav -->
+  <div class="sidenav brand">
+    <a href="#panasonic">Panasonic</a>
+    <a href="#daikin">Daikin</a>
+    <a href="#lg">LG</a>
+    <a href="#sharp">Sharp</a>
+    <a href="#compasiron">Comparison</a>
+  </div>
+  <!-- x sidenav x -->
+  <!-- compareTable -->
+
+  <div class="sidenav compare">
+    <div class="container" id="compareTable">
+      <div class="row">
+        <button class="remove-circle" style="background-color: #dfe2e2; border: none; font-size: 2rem; position: fixed; z-index: 1;">
+          <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="table-responsive">
+            <table class="table table-hover">
+                <!-- Name -->
+                <tr>
+                  <td>Items1</td>
+                  <td>Items2</td>
+                  <td>Items2</td>
+                </tr>
+                <!-- Price -->
+                <tr>
+                  <td>Price1</td>
+                  <td>Price2</td>
+                  <td>Price2</td>
+                </tr>
+                <!-- Origin -->
+                <tr>
+                  <td>Origin1</td>
+                  <td>Origin2</td>
+                  <td>Origin2</td>
+                </tr>
+                <!-- Power -->
+                <tr>
+                  <td>Power1</td>
+                  <td>Power2</td>
+                  <td>Power2</td>
+                <!-- Color -->
+                <tr>
+                  <td>Color1</td>
+                  <td>Color2</td>
+                  <td>Color2</td>
+                </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- x compareTable x -->
+  <!-- contactUs -->
+  <div class="container" id="aboutUs">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+        <h3>Contact Us</h3>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <p>HEAD OFFICE: <br>
+          590 Cach Mang Thang 8 St, Ward 12, District 3, HCMC, Vietnam <br>
+          Phone : +84 34 227 55 57 <br>
+          Toll Free : 1900 1590 <br>
+          Fax : (84) 12 345678 <br>
+          <a href="mailto:info@coolify.com?subject=The%20subject%20of%20the%20mail">info@coolify.com</a>
+        </p>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>SEND US A NOTE: <br>
+            Send us your feedback or any concerns!</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <form action="" method="GET" role="form" id="formFeedback">
+            <div class="form-group">
+              <input type="email" class="form-control" id="" placeholder="Your email" required>
+            </div>
+            <div class="form-group">
+              <textarea name="" id="message" class="form-control" rows="2" placeholder="Your message"
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3193499365248!2d106.6662743!3d10.786834800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1svi!2s!4v1600783194615!5m2!1svi!2s"
+          width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
+      </div>
+
+    </div>
+  </div>
+  <!--x contactUs x-->
+
+
+
+
+
+</body>
+<!-- brand -->
+<div class="panel-footer">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-center">
+        <!-- rotation logo brand -->
+        <img class="navbar-brand " src="./MEDIA/logo no title.png" alt="" style="zoom: 200%;">
+        <!--x rotation logo brand x-->
+      </div>
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <h3> MOST FAVOURITE BRANDS</h3>
+      </div>
+      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-center">
+        <!-- upHome -->
+        <a href="#topBanner"><span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span></a>
+        <!--x upHome x-->
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <p class="row">
+      <!-- brand -->
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <a target="_blank" href="/dieu-hoa-nhiet-do/panasonic/" title="Panasonic">
+        <img class="lazy" width="100%" title="Panasonic" alt="Panasonic"
+          src="https://cdn.mediamart.vn/ProductBrand/panasonic-39o13S.png" />
+      </a>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <a target="_blank" href="/dieu-hoa-nhiet-do/daikin/" title="Daikin">
+        <img class="lazy" width="100%" title="Daikin" alt="Daikin"
+          src="https://cdn.mediamart.vn/ProductBrand/daikin-l25179.png" />
+      </a>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <a target="_blank" href="/dieu-hoa-nhiet-do/lg/" title="LG">
+        <img class="lazy" width="100%" title="LG" alt="LG" src="https://cdn.mediamart.vn/ProductBrand/lg-OI70q3.png" />
+      </a>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <a target="_blank" href="/dieu-hoa-nhiet-do/sharp/" title="Sharp">
+        <img class="lazy" width="100%" title="Sharp" alt="Sharp"
+          src="https://cdn.mediamart.vn/ProductBrand/sharp-dte6C5.png" />
+      </a>
+    </div>
+    <!-- brand -->
+
+    <script>
+      // effect toggle sidenav brand
+      $("document").ready(function () {
+        $(window).scroll(function () {
+          if ($("html").scrollTop() >= 120) {
+            $(".sidenav.brand").show();
+          } else {
+            $(".sidenav.brand").hide();
+          }
+        })
+      })
+      // submit Alert
+      document.getElementById("formFeedback").onsubmit = function () {
+        var email = $("input[type=email]").val();
+        var message = $("#message").val();
+        console.log(email, message);
+        alert("Thank for your feedback!" + "\n" + "Details:" + "\n" + "Your email: " + email + "\n" + "Your feedback: " + message);
+        return false;
+      }
+      // effect toggle sidenav compare
+
+      $("input[type=checkbox]").on("click", function () {
+        if ($("input:checked")) {
+          var checkedClick = $("input:checked").length;
+          if (checkedClick > 1 && checkedClick <= 4) {
+            $(".sidenav.compare").show(400);
+            $(".checkbox").popover('toggle');
+          }
+          else {
+            $(".sidenav.compare").hide(400);
+            if (checkedClick > 4) {
+              alert("Selected items must be less than 5!" + "\nPlease try again!");
+              $("input:checked").removeAttr("checked");
+        $(".sidenav.compare").hide(400);
+              
+            }
+          };
+          if (checkedClick == 1) {
+            $(".checkbox").popover();
+          }
+          else {
+            $(".checkbox").popover('hide');
+          };
+        };
+      });
+      // deselect remove-circle
+      $(".remove-circle").on("click",function(){
+        console.log($("input:checked"));
+        $("input:checked").removeAttr("checked");
+        $(".sidenav.compare").hide(400);
+      })
+    </script>
+
+
+</html>
