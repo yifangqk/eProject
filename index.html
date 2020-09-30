@@ -1170,40 +1170,40 @@
         </button>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="table-responsive">
-            <table class="table table-hover">
-              <!-- Name -->
+            <table class="table table-hover" id="table-compare">
+              <!-- Items -->
               <tr>
                 <td>Items1</td>
                 <td>Items2</td>
                 <td>Items3</td>
                 <td>Items4</td>
               </tr>
-              <!-- Price -->
+              <!-- Capacity -->
+              <tr>
+                <td>Capacity1</td>
+                <td>Capacity2</td>
+                <td>Capacity3</td>
+                <td>Capacity4</td>
+              </tr>
+              <!-- HP -->
+              <tr>
+                <td>HP1</td>
+                <td>HP2</td>
+                <td>HP3</td>
+                <td>HP4</td>
+              </tr>
+              <!-- Inverter -->
+              <tr>
+                <td>Inverter1</td>
+                <td>Inverter2</td>
+                <td>Inverter3</td>
+                <td>Inverter4</td>
+                <!-- Price -->
               <tr>
                 <td>Price1</td>
                 <td>Price2</td>
                 <td>Price3</td>
                 <td>Price4</td>
-              </tr>
-              <!-- Origin -->
-              <tr>
-                <td>Origin1</td>
-                <td>Origin2</td>
-                <td>Origin3</td>
-                <td>Origin4</td>
-              </tr>
-              <!-- Power -->
-              <tr>
-                <td>Power1</td>
-                <td>Power2</td>
-                <td>Power3</td>
-                <td>Power4</td>
-                <!-- Color -->
-              <tr>
-                <td>Color1</td>
-                <td>Color2</td>
-                <td>Color3</td>
-                <td>Color4</td>
               </tr>
             </table>
           </div>
@@ -1396,11 +1396,138 @@
     </script>
     <script>
       // parse array value
-      $(".iconProducts").on("click", function () {
-        $.getJSON("product-ac.json", function (aaa) {
-          var x = aaa[0].Color;
-          console.log(x);
-        })
+      $("input[type=checkbox]").on("click", function () {
+
+        var checkedClick = $(":checked").length;
+        if (checkedClick == 1) {
+
+          var item1 = $(this).parent().siblings(".detailProducts").children("p:nth-child(1)").html();
+          console.log(item1);
+          var row1col1 = $("#table-compare").find("tr:eq(0)").find("td:eq(0)").text();
+          console.log(row1col1);
+          $("#table-compare").find("tr:eq(0)").find("td:eq(0)").html(item1);
+
+          var Capacity1 = $(this).parent().siblings(".detailProducts").children("p:nth-child(2)").html();
+          console.log(Capacity1);
+          var row2col1 = $("#table-compare").find("tr:eq(1)").find("td:eq(0)").text();
+          console.log(row2col1);
+          $("#table-compare").find("tr:eq(1)").find("td:eq(0)").html(Capacity1);
+
+          var HP1 = $(this).parent().siblings(".detailProducts").children("p:nth-child(3)").html();
+          console.log(HP1);
+          var row3col1 = $("#table-compare").find("tr:eq(2)").find("td:eq(0)").text();
+          console.log(row3col1);
+          $("#table-compare").find("tr:eq(2)").find("td:eq(0)").html(HP1);
+
+          var Inverter1 = $(this).parent().siblings(".detailProducts").children("p:nth-child(4)").html();
+          console.log(Inverter1);
+          var row4col1 = $("#table-compare").find("tr:eq(3)").find("td:eq(0)").text();
+          console.log(row4col1);
+          $("#table-compare").find("tr:eq(3)").find("td:eq(0)").html(Inverter1);
+
+          var Price1 = $(this).parent().siblings(".detailProducts").children("p:nth-child(5)").html();
+          console.log(Price1);
+          var row5col1 = $("#table-compare").find("tr:eq(4)").find("td:eq(0)").text();
+          console.log(row5col1);
+          $("#table-compare").find("tr:eq(4)").find("td:eq(0)").html(Price1);
+        }
+        else if (checkedClick == 2) {
+
+          var item2 = $(this).parent().siblings(".detailProducts").children("p:nth-child(1)").html();
+          console.log(item2);
+          var row1col2 = $("#table-compare").find("tr:eq(0)").find("td:eq(1)").text();
+          console.log(row1col2);
+          $("#table-compare").find("tr:eq(0)").find("td:eq(1)").html(item2);
+
+          var Capacity2 = $(this).parent().siblings(".detailProducts").children("p:nth-child(2)").html();
+          console.log(Capacity2);
+          var row2col2 = $("#table-compare").find("tr:eq(1)").find("td:eq(1)").text();
+          console.log(row2col2);
+          $("#table-compare").find("tr:eq(1)").find("td:eq(1)").html(Capacity2);
+
+          var HP2 = $(this).parent().siblings(".detailProducts").children("p:nth-child(3)").html();
+          console.log(HP2);
+          var row3col2 = $("#table-compare").find("tr:eq(2)").find("td:eq(1)").text();
+          console.log(row3col2);
+          $("#table-compare").find("tr:eq(2)").find("td:eq(1)").html(HP2);
+
+          var Inverter2 = $(this).parent().siblings(".detailProducts").children("p:nth-child(4)").html();
+          console.log(Inverter2);
+          var row4col2 = $("#table-compare").find("tr:eq(3)").find("td:eq(1)").text();
+          console.log(row4col2);
+          $("#table-compare").find("tr:eq(3)").find("td:eq(1)").html(Inverter2);
+
+          var Price2 = $(this).parent().siblings(".detailProducts").children("p:nth-child(5)").html();
+          console.log(Price2);
+          var row5col2 = $("#table-compare").find("tr:eq(4)").find("td:eq(1)").text();
+          console.log(row5col2);
+          $("#table-compare").find("tr:eq(4)").find("td:eq(1)").html(Price2);
+        }
+        else if (checkedClick == 3) {
+
+          var item3 = $(this).parent().siblings(".detailProducts").children("p:nth-child(1)").html();
+          console.log(item3);
+          var row1col3 = $("#table-compare").find("tr:eq(0)").find("td:eq(2)").text();
+          console.log(row1col3);
+          $("#table-compare").find("tr:eq(0)").find("td:eq(2)").html(item3);
+
+          var Capacity3 = $(this).parent().siblings(".detailProducts").children("p:nth-child(2)").html();
+          console.log(Capacity3);
+          var row2col3 = $("#table-compare").find("tr:eq(1)").find("td:eq(2)").text();
+          console.log(row2col3);
+          $("#table-compare").find("tr:eq(1)").find("td:eq(2)").html(Capacity3);
+
+          var HP3 = $(this).parent().siblings(".detailProducts").children("p:nth-child(3)").html();
+          console.log(HP3);
+          var row3col3 = $("#table-compare").find("tr:eq(2)").find("td:eq(2)").text();
+          console.log(row3col3);
+          $("#table-compare").find("tr:eq(2)").find("td:eq(2)").html(HP3);
+
+          var Inverter3 = $(this).parent().siblings(".detailProducts").children("p:nth-child(4)").html();
+          console.log(Inverter3);
+          var row4col3 = $("#table-compare").find("tr:eq(3)").find("td:eq(2)").text();
+          console.log(row4col3);
+          $("#table-compare").find("tr:eq(3)").find("td:eq(2)").html(Inverter3);
+
+          var Price3 = $(this).parent().siblings(".detailProducts").children("p:nth-child(5)").html();
+          console.log(Price3);
+          var row5col3 = $("#table-compare").find("tr:eq(4)").find("td:eq(2)").text();
+          console.log(row5col3);
+          $("#table-compare").find("tr:eq(4)").find("td:eq(2)").html(Price3);
+        }
+        else if (checkedClick == 4) {
+
+          var item4 = $(this).parent().siblings(".detailProducts").children("p:nth-child(1)").html();
+          console.log(item4);
+          var row1col4 = $("#table-compare").find("tr:eq(0)").find("td:eq(3)").text();
+          console.log(row1col4);
+          $("#table-compare").find("tr:eq(0)").find("td:eq(3)").html(item4);
+
+          var Capacity4 = $(this).parent().siblings(".detailProducts").children("p:nth-child(2)").html();
+          console.log(Capacity4);
+          var row2col4 = $("#table-compare").find("tr:eq(1)").find("td:eq(3)").text();
+          console.log(row2col4);
+          $("#table-compare").find("tr:eq(1)").find("td:eq(3)").html(Capacity4);
+
+          var HP4 = $(this).parent().siblings(".detailProducts").children("p:nth-child(3)").html();
+          console.log(HP4);
+          var row3col4 = $("#table-compare").find("tr:eq(2)").find("td:eq(3)").text();
+          console.log(row3col4);
+          $("#table-compare").find("tr:eq(2)").find("td:eq(3)").html(HP4);
+
+          var Inverter4 = $(this).parent().siblings(".detailProducts").children("p:nth-child(4)").html();
+          console.log(Inverter4);
+          var row4col4 = $("#table-compare").find("tr:eq(3)").find("td:eq(3)").text();
+          console.log(row4col4);
+          $("#table-compare").find("tr:eq(3)").find("td:eq(3)").html(Inverter4);
+
+          var Price4 = $(this).parent().siblings(".detailProducts").children("p:nth-child(5)").html();
+          console.log(Price4);
+          var row5col4 = $("#table-compare").find("tr:eq(4)").find("td:eq(3)").text();
+          console.log(row5col4);
+          $("#table-compare").find("tr:eq(4)").find("td:eq(3)").html(Price4);
+        }
+
       });
       //get value of clicked checkbox
       // -------------------------
