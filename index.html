@@ -267,6 +267,9 @@
     .modal-body table td{
      width: 50%;
     }
+    .modal-body table td img{
+     width: 100%;
+    }
     .modal-body span{
       color: #1f834c;
     }
@@ -382,6 +385,15 @@
       margin-top: 30px;
     }
 
+    /* ------------------------------------- */
+    /* scroll bar */
+    ::-webkit-scrollbar {
+    width: 18px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #517EA6;
+        border-radius: 6px 6px;
+    }
     /* ------------------------------------- */
   </style>
 </head>
@@ -1498,12 +1510,8 @@
           give it to you in writing. It’s our 100% commitment to you.
         </p>
       </div>
-
-
     </div>
   </div>
-
-
   <!------------------>
 
   <!-- brand footer -->
@@ -1573,7 +1581,6 @@
       </div>
     </div>
   </div>
-  
   <!--------------------- -->
 </body>
 
@@ -1877,6 +1884,14 @@
                                     <tr>
                                       <td><span>Price:</span></td>
                                       <td>${productDetails.Price}</td>
+                                    </tr>
+                                    <tr>
+                                      <td><span>Photo:</span></td>
+                                      <td><img src="${productDetails.image}" alt=""></td>
+                                    </tr>
+                                    <tr>
+                                      <td><span>Brochure Download:</span></td>
+                                      <td><a href="./DOCU/${productDetails.link}" download>Get it</a></td>
                                     </tr>
                                   </table>
                             </div>
