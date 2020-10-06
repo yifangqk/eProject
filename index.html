@@ -61,6 +61,21 @@
     }
 
     /* ----------------------------- */
+    /* --------------email us--------------- */
+    .glyphicon.glyphicon-envelope{
+      font-size: 4rem;
+      color: #517EA6;
+      padding: 0;
+      margin: 0;
+      float: right;
+      right: -10;
+    }
+    .email-us{
+      display: block;
+      margin-top: 7px;
+      height: fit-content;
+    }
+    /* ----------------------------- */
     /* sidenav decor */
     .sidenav.brand {
       display: none;
@@ -256,24 +271,30 @@
         color: #2c6b8f;
       }
     }
+
     /* -------------------------------------- */
     /* modal table */
-    .modal-content{
+    .modal-content {
       background-color: #b7d5e6;
     }
-    .modal-body{
+
+    .modal-body {
       margin-left: 2cm;
     }
-    .modal-body table td{
-     width: 50%;
+
+    .modal-body table td {
+      width: 50%;
     }
-    .modal-body table td img{
-     width: 100%;
+
+    .modal-body table td img {
+      width: 100%;
     }
-    .modal-body span{
+
+    .modal-body span {
       color: #1f834c;
     }
-    .modal-title{
+
+    .modal-title {
       font-style: italic;
       color: #567f97;
     }
@@ -286,6 +307,7 @@
       font-weight: 700;
       color: #517EA6;
     }
+
     #about-left span {
       font-weight: lighter;
       color: #7ecefd;
@@ -368,7 +390,7 @@
       font-weight: 700;
       color: #517EA6;
     }
-    
+
     #aboutUs #title h3 {
       text-align: center;
       font-size: 40px;
@@ -379,8 +401,9 @@
       color: #517EA6;
       border: 2px #517EA6 solid;
       border-radius: 20px;
-      
+
     }
+
     iframe {
       margin-top: 30px;
     }
@@ -388,12 +411,14 @@
     /* ------------------------------------- */
     /* scroll bar */
     ::-webkit-scrollbar {
-    width: 18px;
+      width: 18px;
     }
+
     ::-webkit-scrollbar-thumb {
-        background-color: #517EA6;
-        border-radius: 6px 6px;
+      background-color: #517EA6;
+      border-radius: 6px 6px;
     }
+
     /* ------------------------------------- */
   </style>
 </head>
@@ -448,21 +473,26 @@
               </ul>
               <!-- search -->
               <ul>
-                <form class="navbar-form navbar-right">
-                  <div class="input-group">
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Search" style="border-right: none;">
+                <div class="container email-us">
+                  <div class="row">
+                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                      <a href="mailto:info@coolify.com?subject=The%20subject%20of%20the%20mail">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                      </a>
                     </div>
-                    <div class="input-group-addon" style="background-color: #ffff; border-left: none;"><i
-                        class="glyphicon glyphicon-search"></i></div>
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+                      <p>
+                        <span>Give us an email</span>
+                        <a href="mailto:info@coolify.com?subject=The%20subject%20of%20the%20mail">info@coolify.com</a>
+                      </p>
+                    </div>
                   </div>
-                </form>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
-      </div>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+      </nav>
     </div>
+  </div>
   </div>
   <!--------------------------------- -->
 
@@ -1378,7 +1408,7 @@
         </div>
         <div class="clearfix">
         </div> -->
-       <h3>Contact Us</h3> 
+        <h3>Contact Us</h3>
 
       </div>
 
@@ -1573,7 +1603,7 @@
           <h4 class="modal-title">Product Details:</h4>
         </div>
         <div class="modal-body">
-          
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -1832,18 +1862,18 @@
 <script>
   // open modal details products
   $(".iconProducts").on("click", function () {
-    
+
     var title = $(this).attr('title');
-    let productDetails = database.filter(ele =>ele.id ==title);
+    let productDetails = database.filter(ele => ele.id == title);
     addModal(productDetails[0]);
     $("#modal-id").modal("show");
     console.log(database);
     console.log(title);
     console.log(productDetails);
   })
-   // addModal function to query data
-   function addModal(productDetails) {
-        let x = ` <div class="row">
+  // addModal function to query data
+  function addModal(productDetails) {
+    let x = ` <div class="row">
                             <div>
                                 <table>
                                     <tr>
@@ -1896,17 +1926,17 @@
                                   </table>
                             </div>
                         </div> `
-        $('.modal-body').html(x)
-        }
-        // -----------------
+    $('.modal-body').html(x)
+  }
+  // -----------------
   // load data ...
-var database = [];
-$.getJSON("product-ac.json")
+  var database = [];
+  $.getJSON("product-ac.json")
     .done(function (result) {
-        database = result;
+      database = result;
     })
     .fail(function () {
-        alert("Get data that bai ");
+      alert("Get data that bai ");
     });
     //================
 </script>
