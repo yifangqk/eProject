@@ -132,7 +132,7 @@
         "EER":"17.41-5.10 Btu/hW-W/W",
         "Price":"16.490.000₫",
         "link":"PA9.pdf",
-        "image":"./MEDIA/products/PA/PA8.png"
+        "image":"./MEDIA/products/PA/PA9.png"
     },
     {
         "id":"product10",
@@ -192,7 +192,7 @@
         "EER":"11.3-3.31 Btu/hW-W/W",
         "Price":"11.990.000₫",
         "link":"DA01.pdf",
-        "image":"./MEDIA/products/DA/DA1.png"
+        "image":"./MEDIA/products/DA/DA01.png"
     },
     {
         "id":"product14",
@@ -207,7 +207,7 @@
         "EER":"14.15-4.15 Btu/hW-W/W",
         "Price":"11.090.000₫",
         "link":"DA02.pdf",
-        "image":"./MEDIA/products/DA/DA2.png"
+        "image":"./MEDIA/products/DA/DA02.png"
     },
     {
         "id":"product15",
@@ -222,7 +222,7 @@
         "EER":"11.12-3.27 Btu/hW-W/W",
         "Price":"13.590.000₫",
         "link":"DA03.pdf",
-        "image":"./MEDIA/products/DA/DA3.png"
+        "image":"./MEDIA/products/DA/DA03.png"
     },
     {
         "id":"product16",
@@ -237,7 +237,7 @@
         "EER":"10,30-3,01 Btu/hW-W/W",
         "Price":"21.990.000₫",
         "link":"DA04.pdf",
-        "image":"./MEDIA/products/DA/DA4.png"
+        "image":"./MEDIA/products/DA/DA04.png"
     },
     {
         "id":"product17",
@@ -252,7 +252,7 @@
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"9.290.000₫",
         "link":"DA05.pdf",
-        "image":"./MEDIA/products/DA/DA5.png"
+        "image":"./MEDIA/products/DA/DA05.png"
     },
     {
         "id":"product18",
@@ -267,7 +267,7 @@
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"10.490.000₫",
         "link":"DA06.pdf",
-        "image":"./MEDIA/products/DA/DA6.png"
+        "image":"./MEDIA/products/DA/DA06.png"
     },
     {
         "id":"product19",
@@ -282,7 +282,7 @@
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"12.590.000₫",
         "link":"DA07.pdf",
-        "image":"./MEDIA/products/DA/DA7.png"
+        "image":"./MEDIA/products/DA/DA07.png"
     },
     {
         "id":"product20",
@@ -297,7 +297,7 @@
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"16.090.000₫",
         "link":"DA08.pdf",
-        "image":"./MEDIA/products/DA/DA8.png"
+        "image":"./MEDIA/products/DA/DA08.png"
     },
     {
         "id":"product21",
@@ -312,7 +312,7 @@
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"13.090.000₫",
         "link":"DA09.pdf",
-        "image":"./MEDIA/products/DA/DA9.png"
+        "image":"./MEDIA/products/DA/DA09.png"
     },
     {
         "id":"product22",
@@ -552,7 +552,7 @@
         "EER":"12.12-1.2 Btu/hW-W/W",
         "Price":"7.990.000₫",
         "link":"SA01.pdf",
-        "image":"./MEDIA/products/SA/SA1.png"
+        "image":"./MEDIA/products/SA/SA01.png"
     },
     {
         "id":"product38",
@@ -567,7 +567,7 @@
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"9.790.000₫",
         "link":"SA02.pdf",
-        "image":"./MEDIA/products/SA/SA2.png"
+        "image":"./MEDIA/products/SA/SA02.png"
     },
     {
         "id":"product39",
@@ -582,7 +582,7 @@
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"14.590.000₫",
         "link":"SA03.pdf",
-        "image":"./MEDIA/products/SA/SA3.png"
+        "image":"./MEDIA/products/SA/SA03.png"
     },
     {
         "id":"product40",
@@ -597,7 +597,7 @@
         "EER":"12.12-3.2 Btu/hW-W/W",
         "Price":"8.790.000₫",
         "link":"SA04.pdf",
-        "image":"./MEDIA/products/SA/SA4.png"
+        "image":"./MEDIA/products/SA/SA04.png"
     },
     {
         "id":"product41",
@@ -612,7 +612,7 @@
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"10.490.000₫",
         "link":"SA05.pdf",
-        "image":"./MEDIA/products/SA/SA5.png"
+        "image":"./MEDIA/products/SA/SA05.png"
     },
     {
         "id":"product42",
@@ -627,7 +627,7 @@
         "EER":"13.12-3.2 Btu/hW-W/W",
         "Price":"10.190.000₫",
         "link":"SA06.pdf",
-        "image":"./MEDIA/products/SA/SA6.png"
+        "image":"./MEDIA/products/SA/SA06.png"
     },
     {
         "id":"product43",
@@ -642,7 +642,7 @@
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"7.990.000₫",
         "link":"SA07.pdf",
-        "image":"./MEDIA/products/SA/SA7.png"
+        "image":"./MEDIA/products/SA/SA07.png"
     },
     {
         "id":"product44",
@@ -657,7 +657,7 @@
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"9.790.000₫",
         "link":"SA08.pdf",
-        "image":"./MEDIA/products/SA/SA8.png"
+        "image":"./MEDIA/products/SA/SA08.png"
     },
     {
         "id":"product45",
@@ -672,7 +672,7 @@
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"14.490.000₫",
         "link":"SA09.pdf",
-        "image":"./MEDIA/products/SA/SA9.png"
+        "image":"./MEDIA/products/SA/SA09.png"
     },
     {
         "id":"product46",
@@ -701,7 +701,7 @@
         "powerInput":"700 W",
         "EER":"10.12-3.2 Btu/hW-W/W",
         "Price":"17.890.000₫",
-        "link":"SA011.pdf",
+        "link":"SA11.pdf",
         "image":"./MEDIA/products/SA/SA11.png"
     },
     {
