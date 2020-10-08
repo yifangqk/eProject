@@ -1,0 +1,448 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* top banner */
+    #topBannerImage {
+      height: 50px;
+      width: 390px;
+      position: fixed;
+      display: inline-block;
+      z-index: 2;
+      border-radius: 0 0 20px 20px;
+    }
+
+    #navBarTop {
+      margin-top: 70px;
+    }
+
+    /* decor compareTable */
+    .sidenav.compare {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 200px;
+      background: #dfe2e2;
+      overflow-x: hidden;
+      padding: 4px;
+      width: 55%;
+      font-size: 1.5rem;
+      right: 0;
+      border-radius: 20px 0 0 20px;
+      box-shadow: rgb(187, 183, 183) -5px 7px 10px 1px;
+    }
+
+    .table-responsive {
+      width: 65%;
+      text-align: center;
+      border: 1px solid rgb(209, 202, 202);
+      border-right: none;
+      left: 0;
+      border-radius: 10px 0 0 10px;
+    }
+
+    /* ----------------------------- */
+    /* --------------email us--------------- */
+    .glyphicon.glyphicon-envelope {
+      font-size: 4rem;
+      color: #517EA6;
+      padding: 0;
+      margin: 0;
+      float: right;
+      right: -10;
+    }
+
+    .email-us {
+      display: block;
+      margin-top: 7px;
+      height: fit-content;
+    }
+
+    /* ----------------------------- */
+    /* sidenav decor */
+    .sidenav.brand {
+      display: none;
+      width: fit-content;
+      position: fixed;
+      z-index: 1;
+      top: 250px;
+      left: 1px;
+      background: #dfe2e2;
+      overflow-x: hidden;
+      padding: 4px 0;
+      border-radius: 0 20px 20px 0;
+      box-shadow: rgb(153, 148, 148) 5px 5px 10px 1px;
+    }
+
+    .sidenav.brand a {
+      padding: 6px 0px 0px 6px;
+      text-decoration: none;
+      font-size: 100%;
+      font-weight: bolder;
+      color: #517EA6;
+      display: block;
+    }
+
+    .sidenav.brand a:hover {
+      background: #517EA6;
+      color: #dfe2e2;
+    }
+
+    /* ------------------------- */
+    /* general css */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #f0f2f2;
+    }
+
+    li>a {
+      font-size: 1.7rem;
+      margin: 0 1.5rem;
+    }
+
+    .active {
+      background-color: #84A9BF;
+    }
+
+    #activelink {
+      background-color: #84A9BF;
+      color: #ffff;
+    }
+
+    h3 {
+      color: #517EA6;
+      font-weight: 600;
+    }
+
+    /* -------------------------- */
+    /* carousel decor */
+    #carou1,
+    #carou2,
+    #carou3 {
+      height: 100%;
+      width: 100%;
+    }
+
+    .carousel-inner {
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .carousel-caption>h1,
+    .carousel-caption>p {
+      color: #517EA6;
+      font-size: 1rem;
+    }
+
+    .carousel-caption {
+      height: 60%;
+      vertical-align: middle;
+    }
+
+    .carousel-caption>p {
+      color: #f0f2f2;
+    }
+
+    /* ------------------------- */
+    /* 48 products */
+    .iconProducts {
+      width: 100%;
+      border-radius: 15px;
+      background-color: #d8e4e4;
+      margin-bottom: 15px;
+      box-shadow: rgba(153, 148, 148, 0.596) 10px 5px 10px 0px;
+    }
+
+    #productionContainer:hover {
+      position: relative;
+      bottom: 5px;
+    }
+
+    .iconProducts:hover {
+      box-shadow: 0 1px 50px 0 #517EA6;
+    }
+
+    .detailProducts {
+      font-size: 1rem;
+      color: #517EA6;
+      font-weight: bold;
+      position: absolute;
+      z-index: 1;
+      top: 45%;
+      left: 10%;
+    }
+
+    /* --------------------------- */
+    /* checkbok products */
+    .checkbox {
+      display: inline-block;
+      position: absolute;
+      top: 10%;
+      left: 20%;
+    }
+
+    /* ----------------------------- */
+    /* glyphicon upArrow */
+    .glyphicon.glyphicon-circle-arrow-up {
+      font-size: 4rem;
+      display: block;
+      float: right;
+      position: relative;
+      top: 5vh;
+    }
+
+    /* ----------------------------- */
+    /* animation brand logo */
+    .navbar-brand,
+    .glyphicon.glyphicon-cog, 
+    #about_photo img {
+      -webkit-animation: spin 4s linear infinite;
+      -moz-animation: spin 4s linear infinite;
+      animation: spin 4s linear infinite;
+    }
+
+    @-moz-keyframes spin {
+      100% {
+        -moz-transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ------------------------------------- */
+    /* glyphicon glyphicon-check */
+    .glyphicon.glyphicon-check {
+      font-size: 1.7rem;
+      color: #1f834c;
+      display: inline-block;
+      left: 6px;
+    }
+
+    /* ------------------------------------- */
+    /* priceTag */
+    .priceTag {
+      font-size: 1.7rem;
+      /* color: #3f90d3; */
+      animation: color-change .7s infinite;
+    }
+
+    @keyframes color-change {
+      0% {
+        color: #2c6b8f;
+      }
+
+      50% {
+        color: #b7d5e6;
+      }
+
+      100% {
+        color: #2c6b8f;
+      }
+    }
+
+    /* -------------------------------------- */
+    /* modal table */
+    .modal-content {
+      background-color: #b7d5e6;
+    }
+
+    .modal-body {
+      margin-left: 2cm;
+    }
+
+    .modal-body table td {
+      width: 50%;
+    }
+
+    .modal-body table td img {
+      width: 100%;
+    }
+
+    .modal-body span {
+      color: #1f834c;
+    }
+
+    .modal-title {
+      font-style: italic;
+      color: #567f97;
+    }
+    /* About Us */
+    #about-left h2 {
+      font-size: 40px;
+      line-height: 52px;
+      margin-bottom: 34px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #517EA6;
+    }
+
+    #about-left span {
+      font-weight: lighter;
+      color: #7ecefd;
+    }
+
+    #about-left h3 {
+      color: #2185c5;
+      text-transform: uppercase;
+      font-size: 25px;
+      font-weight: lighter;
+      margin-bottom: 13px;
+    }
+
+    #about-right {
+      float: left;
+    }
+
+    #about-right h3 {
+      font-size: 35px;
+      line-height: 37px;
+      margin-bottom: 27px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #517EA6;
+
+    }
+
+
+
+    .points-list ul {
+      list-style: none;
+      display: block;
+      list-style-type: none;
+    }
+
+    .points-list ul li {
+      background: url(./MEDIA/snow-icon.jpg) no-repeat 0 2px;
+      padding: 0 0 16px 33px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+
+    li {
+      display: list-item;
+      text-align: -webkit-match-parent;
+    }
+
+    #main_content {
+      text-align: center;
+      margin: auto;
+      padding-top: 25px;
+
+    }
+
+    #main_content #content .image {
+      width: 100%x;
+      height: 157px;
+      margin-bottom: 20px;
+    }
+
+    #main_content #content .image .cont_img-circle {
+      width: 120px;
+      height: 120px;
+      background: -webkit-linear-gradient(top, #29A1D2, #1F7EC2);
+      border-radius: 50%;
+      border: 1px solid #517EA6;
+      text-align: center;
+      margin: auto;
+    }
+
+    #main_content #content .image .cont_img-circle img {
+      margin-top: 25px;
+      width: 60px;
+    }
+
+    #main_content #content h3 {
+      font-size: 35px;
+      line-height: 37px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #517EA6;
+    }
+
+    #aboutUs #title h3,
+    #title h3 {
+      text-align: center;
+      font-size: 40px;
+      line-height: 52px;
+      margin-bottom: 34px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #517EA6;
+      border: 2px #517EA6 solid;
+      border-radius: 20px;
+
+    }
+
+    iframe {
+      margin-top: 30px;
+    }
+    /* ------------------------------------- */
+    /* scroll bar */
+    ::-webkit-scrollbar {
+      width: 18px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #517EA6;
+      border-radius: 6px 6px;
+    }
+    /* Team Member */
+    #about_photo img {
+      width: 75%;
+    }
+
+    #about-text h2 {
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #517EA6;
+    }
+
+    #about-text span {
+      font-weight: lighter;
+      color: #7ecefd;
+      font-size: large;
+    }
+
+    #about-text p {
+      color: #2185c5;
+      font-size: 25px;
+      font-weight: lighter;
+    }
+
+    #about-content p {
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 20px;
+      color: #999999;
+      margin-bottom: 15px;
+    }
+    .team-member-photo img {
+      border-radius: 50%;
+      display: block;
+      margin: auto;
+      padding: auto;
+    }
+    #three-man {
+      margin-top: 50px;
+    }
+
+    /* ------------------------------------- */
