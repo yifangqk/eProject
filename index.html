@@ -62,7 +62,7 @@
 
     /* ----------------------------- */
     /* --------------email us--------------- */
-    .glyphicon.glyphicon-envelope{
+    .glyphicon.glyphicon-envelope {
       font-size: 4rem;
       color: #517EA6;
       padding: 0;
@@ -70,11 +70,13 @@
       float: right;
       right: -10;
     }
-    .email-us{
+
+    .email-us {
       display: block;
       margin-top: 7px;
       height: fit-content;
     }
+
     /* ----------------------------- */
     /* sidenav decor */
     .sidenav.brand {
@@ -216,7 +218,8 @@
     /* ----------------------------- */
     /* animation brand logo */
     .navbar-brand,
-    .glyphicon.glyphicon-cog {
+    .glyphicon.glyphicon-cog, 
+    #about_photo img {
       -webkit-animation: spin 4s linear infinite;
       -moz-animation: spin 4s linear infinite;
       animation: spin 4s linear infinite;
@@ -298,7 +301,7 @@
       font-style: italic;
       color: #567f97;
     }
-
+    /* About Us */
     #about-left h2 {
       font-size: 40px;
       line-height: 52px;
@@ -391,7 +394,8 @@
       color: #517EA6;
     }
 
-    #aboutUs #title h3 {
+    #aboutUs #title h3,
+    #title h3 {
       text-align: center;
       font-size: 40px;
       line-height: 52px;
@@ -407,7 +411,6 @@
     iframe {
       margin-top: 30px;
     }
-
     /* ------------------------------------- */
     /* scroll bar */
     ::-webkit-scrollbar {
@@ -417,6 +420,46 @@
     ::-webkit-scrollbar-thumb {
       background-color: #517EA6;
       border-radius: 6px 6px;
+    }
+    /* Team Member */
+    #about_photo img {
+      width: 75%;
+    }
+
+    #about-text h2 {
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #517EA6;
+    }
+
+    #about-text span {
+      font-weight: lighter;
+      color: #7ecefd;
+      font-size: large;
+    }
+
+    #about-text p {
+      color: #2185c5;
+      font-size: 25px;
+      font-weight: lighter;
+    }
+
+    #about-content p {
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 20px;
+      color: #999999;
+      margin-bottom: 15px;
+    }
+    .team-member-photo img {
+      border-radius: 50%;
+      display: block;
+      margin: auto;
+      padding: auto;
+    }
+    #three-man {
+      margin-top: 50px;
     }
 
     /* ------------------------------------- */
@@ -487,12 +530,12 @@
                       </p>
                     </div>
                   </div>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-      </nav>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
     </div>
-  </div>
   </div>
   <!--------------------------------- -->
 
@@ -1402,14 +1445,9 @@
   <div class="container" id="aboutUs">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id="title">
-        <!-- <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center col-lg-offset-4"
-          style="border: solid 2px #517EA6; border-radius: 30px; height: fit-content; width: fit-content;">
-          <h3>CONTACT US</h3>
-        </div>
         <div class="clearfix">
-        </div> -->
+        </div>
         <h3>Contact Us</h3>
-
       </div>
 
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -1542,6 +1580,95 @@
       </div>
     </div>
   </div>
+  <!--TeamMember-->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id="title">
+        <h3>About Us</h3>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="about-text">
+      
+       <h2>
+        <span>What Makes a Great About Us!</span>
+       </h2>
+    </div>
+    <div class="row">
+      <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" id="about_photo">
+        <img src="./MEDIA/logo no title.png" alt="">
+      </div>
+
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7" id="about-content">
+        <p>
+          At Coolify.com, we believe everyone deserves to have a online store. Innovation and simplicity makes us happy:
+          our goal is to remove any technical or financial barriers that can prevent you purchase in my website. We're
+          excited to help you on your journey!
+        </p>
+        <p>
+          Coolify.com began in 2020. After years in the online store industry, we realized that it was near impossible
+          for people want purchase online. Traditional online store services were simply too complicated, time
+          consuming, and expensive to manage.
+        </p>
+        <p>
+          After seeing an increased need for ecommerce solutions, we developed one of the only fully-featured, free and
+          commission-free online store builders, allowing any people to purchase online.
+        </p>
+      </div>
+    </div>
+
+    <!--Team Section Star-->
+
+    <div class="container" id="three-man">
+      <div class="row">
+        
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="team-member">
+            <div class="team-member-photo">
+              <img src="./MEDIA/team_member/cang.png" alt="">
+            </div>
+            <div class="team-member-info text-center">
+              <h5 class="member-name"><a href="#">Trinh Van Cang</a></h5>
+              <p class="member-position">Chairman</p>
+              <p class="mb-20">Owner Coolify</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="team-member">
+            <div class="team-member-photo">
+              <img src="./MEDIA/team_member/tai.png" alt="">
+            </div>
+            <div class="team-member-info text-center">
+              <h5 class="member-name"><a href="#">Ngo Tan Tai</a></h5>
+              <p class="member-position">Co-Founder</p>
+              <p class="mb-20">CEO and senior management </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="team-member">
+            <div class="team-member-photo">
+              <img src="./MEDIA/team_member/gia.png" alt="">
+            </div>
+            <div class="team-member-info text-center">
+              <h5 class="member-name"><a href="#">Tran Viet Hoang Gia</a></h5>
+              <p class="member-position">Marketing Manager</p>
+              <p class="mb-20">CMO and senior management </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+
   <!------------------>
 
   <!-- brand footer -->
