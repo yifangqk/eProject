@@ -297,12 +297,11 @@
                                       <td>${productDetails.Price}</td>
                                     </tr>
                                     <tr>
-                                      <td><span>Photo:</span></td>
+                                      <td></td>
                                       <td><img src="${productDetails.image}" alt=""></td>
                                     </tr>
                                     <tr>
-                                      <td><span>Brochure Download:</span></td>
-                                      <td><a href="./DOCU/${productDetails.link}" download>Get it</a></td>
+                                      <td><a href="./DOCU/${productDetails.link}" download>Brochure Download</a></td>
                                     </tr>
                                   </table>
                             </div>
