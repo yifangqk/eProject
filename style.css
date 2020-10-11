@@ -3,6 +3,10 @@
       margin: 0;
       padding: 0;
     }
+    #branch-title {
+      margin-top: 34px;
+      margin-bottom: 34px;
+    }
 
     /* top banner */
     #topBannerImage {
@@ -274,6 +278,9 @@
 
     .modal-body table td img {
       width: 100%;
+      display: block;
+      margin: auto;
+      padding: auto;
     }
 
     .modal-body span {
@@ -345,7 +352,9 @@
       text-align: center;
       margin: auto;
       padding-top: 25px;
-
+    }
+    #main_content #content span {
+      font-weight: lighter;
     }
 
     #main_content #content .image {
@@ -383,6 +392,7 @@
       font-size: 40px;
       line-height: 52px;
       margin-bottom: 34px;
+      margin-top: 34px;
       text-transform: uppercase;
       font-weight: 700;
       color: #517EA6;
@@ -443,6 +453,7 @@
     }
     #three-man {
       margin-top: 50px;
+      margin-bottom: 34px;
     }
 
     /* ------------------------------------- */
