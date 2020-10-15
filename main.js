@@ -89,7 +89,7 @@
     var checkedClick = $(":checked").length;
     if (checkedClick == 1) {
 
-      var brand1 = $(this).parent().parent().siblings(":has(h3)").html();
+      var brand1 = $(this).parent().parent().siblings(":has(img)").html();
       console.log(brand1);
       var row1col1 = $("#table-compare").find("tr:eq(0)").find("td:eq(0)").text();
       console.log(row1col1);
@@ -127,7 +127,7 @@
     }
     else if (checkedClick == 2) {
 
-      var brand2 = $(this).parent().parent().siblings(":has(h3)").html();
+      var brand2 = $(this).parent().parent().siblings(":has(img)").html();
       console.log(brand2);
       var row1col2 = $("#table-compare").find("tr:eq(0)").find("td:eq(1)").text();
       console.log(row1col2);
@@ -165,7 +165,7 @@
     }
     else if (checkedClick == 3) {
 
-      var brand3 = $(this).parent().parent().siblings(":has(h3)").html();
+      var brand3 = $(this).parent().parent().siblings(":has(img)").html();
       console.log(brand3);
       var row1col3 = $("#table-compare").find("tr:eq(0)").find("td:eq(2)").text();
       console.log(row1col3);
@@ -203,7 +203,7 @@
     }
     else if (checkedClick == 4) {
 
-      var brand4 = $(this).parent().parent().siblings(":has(h3)").html();
+      var brand4 = $(this).parent().parent().siblings(":has(img)").html();
       console.log(brand4);
       var row1col4 = $("#table-compare").find("tr:eq(0)").find("td:eq(3)").text();
       console.log(row1col4);
