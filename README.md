@@ -19,6 +19,10 @@ Project title: Coolify AirConditioner
              Tran Viet Hoang Gia (GiaTVHTS2006012@fpt.edu.vn) Student1270668
 
 ============================
+
+eProject docmentation at https://github.com/yifangqk/eProject/tree/master/Documentation
+
+============================
  
 eProject published at https://yifangqk.github.io/eProject/
 
